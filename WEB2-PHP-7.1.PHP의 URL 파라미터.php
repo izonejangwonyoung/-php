@@ -1,5 +1,5 @@
 
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -7,6 +7,6 @@
     <title></title>
   </head>
   <body>
-    안녕하세요. 김채원님
+    안녕하세요. <?php echo $_GET['name']; ?>님
   </body>
 </html>
