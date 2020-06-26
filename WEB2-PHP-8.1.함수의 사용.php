@@ -17,7 +17,7 @@
 
 
       <?php
-    echo  strlen($str)
+    echo  strlen($str);
 
 
        ?>
