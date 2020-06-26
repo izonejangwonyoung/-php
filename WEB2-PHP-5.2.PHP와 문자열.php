@@ -14,5 +14,13 @@
 
 
       ?>
+<h2>string length function</h2>
+<?php
+echo "hello world";
+
+echo strlen("hello world");
+
+ ?>
+
   </body>
 </html>
