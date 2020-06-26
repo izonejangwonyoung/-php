@@ -2,9 +2,25 @@
 <html>
 <body>
   <h1>1+1</h1>
-<?php
+  <?php
 
-echo 1+1;
-?>
-</body>
-</html>
+  echo 1+1;
+  ?>
+  <h1>2-1</h1>
+  <?php
+  echo 2-1;
+
+  ?>
+  <h1>2*2</h1>
+  <?php
+  echo 2*2;
+
+  ?>
+
+
+
+
+
+
+  </body>
+  </html>
