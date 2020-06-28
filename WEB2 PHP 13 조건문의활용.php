@@ -35,7 +35,7 @@ echo file_get_contents("data/".$_GET['id']);
 
 } else {
 echo "TEST 페이지 입니다.";
-
+ 
 }
 
         ?>
