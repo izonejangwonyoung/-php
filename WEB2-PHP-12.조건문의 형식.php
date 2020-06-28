@@ -11,7 +11,17 @@
 
 <?php
 echo "1<br>";
-echo "2<br>";
+if(false){
+
+
+echo "2-1<br>";
+
+
+
+} else {
+  echo "2-2<br>";
+
+}
 echo "3<br>";
  ?>
 
