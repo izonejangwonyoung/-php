@@ -13,6 +13,11 @@
       <li><a href="WEB2-PHP-7.2.URL 파라미터의 활용.php?id=아이즈원.txt">아이즈원</a></li>
 
     </ol>
+<?php
+$list=scandir('./data');
+var_dump($list);
+ ?>
+
 
     <h2>
     <?php
