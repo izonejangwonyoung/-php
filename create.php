@@ -10,7 +10,23 @@ function print_title(){
 
      ?>
 
+<?php
+function print_description(){
 
+  if(isset($_GET['id'])){
+
+  echo file_get_contents("data/".$_GET['id']);
+
+  } else {
+
+  echo "안녕";
+
+  }
+
+
+}
+
+ ?>
 
 <!DOCTYPE html>
 
@@ -62,33 +78,17 @@ print_title();
 
     </ol>
 <a href="create.php">create</a>
-<?php if(isset($_GET['id'])){ ?>
+  <form action="create_process.php" method="post">
 
-<a href="update.php?id=<?=$_GET['id']; ?>">update</a>
-<?php  } ?>
+    <p><input type="text" name="title" placeholder="title"></p>
 
-    <h2>
-      <?php
-            print_title();
-       ?>
+<p><textarea name="description"
+placeholder="description"></textarea>
+</p>
+<p>
+<input type="submit">
 
-        </h2>
-
-
-
-        <?php
-if(isset($_GET['id'])){
-
-echo file_get_contents("data/".$_GET['id']);
-
-} else {
-
-echo "안녕";
-
-}
-
-
-
-         ?>
+</p>
+  </form>
   </body>
 </html>
