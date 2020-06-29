@@ -9,6 +9,23 @@ function print_title(){
 }
 
      ?>
+ <?php
+     function print_description(){
+
+       if(isset($_GET['id'])){
+
+       echo file_get_contents("data/".$_GET['id']);
+
+       } else {
+
+       echo "안녕";
+
+       }
+
+
+     }
+
+      ?>
 
 
 
@@ -63,8 +80,14 @@ print_title();
     </ol>
 <a href="create.php">create</a>
 <?php if(isset($_GET['id'])){ ?>
-
+<a href="delete.php?id=<?=$_GET['id'] ?>">delete</a>
 <a href="update.php?id=<?=$_GET['id']; ?>">update</a>
+<form action="delete_process.php" method="post">
+  <input type="hidden" name="id" value="<?=$_GET['id'] ?>">
+  <input type="submit" value="delete">
+
+</form>
+
 <?php  } ?>
 
     <h2>
@@ -77,15 +100,9 @@ print_title();
 
 
         <?php
-if(isset($_GET['id'])){
+print_description();
 
-echo file_get_contents("data/".$_GET['id']);
 
-} else {
-
-echo "안녕";
-
-}
 
 
 
