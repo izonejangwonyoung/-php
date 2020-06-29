@@ -12,7 +12,10 @@
 
       $i=0;
       while($i<count($list)){
-        echo "<li><a href=\"WEB2-PHP-7.2.URL 파라미터의 활용.php?id=$list[$i]\">$list[$i]</a></li>\n";
+        if ($list[$i]!='.'){
+          if ($list[$i]!='..'){
+        echo "<li><a href=\"WEB2-PHP-7.2.URL 파라미터의 활용.php?id=$list[$i]\">$list[$i]</a></li>\n";}
+}
         $i=$i+1;
 
       }
