@@ -1,8 +1,30 @@
+<?php
+function print_title(){
+  if(isset($_GET['id'])){
+      echo $_GET["id"];
+
+    } else {
+      echo "IZ-LAND에 오신 여러분, 환영합니다";
+                    }
+}
+
+     ?>
+
+
+
 <!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>
+
+<?php
+
+print_title();
+ ?>
+
+    </title>
   </head>
   <body>
     <h1><a href="WEB2-PHP-7.2.URL 파라미터의 활용.php">IZONE</a></h1>
@@ -41,32 +63,10 @@
     </ol>
 
     <h2>
-    <?php
+      <?php
+            print_title();
+       ?>
 
-if(isset($_GET['id'])){
-echo $_GET["id"];
-
-} else {
-
-  echo "IZ-LAND에 오신 여러분, 환영합니다";
-
-}
-
-
-     ?>
-    <h2>
-
-       <?php
-if(isset($_GET['id'])){
-
-echo file_get_contents("data/".$_GET['id']);
-
-} else {
-echo "TEST 페이지 입니다.";
-
-}
-
-        ?>
         </h2>
   </body>
 </html>
