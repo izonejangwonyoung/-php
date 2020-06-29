@@ -68,5 +68,22 @@ print_title();
        ?>
 
         </h2>
+
+
+
+        <?php
+if(isset($_GET['id'])){
+
+echo file_get_contents("data/".$_GET['id']);
+
+} else {
+
+echo "안녕";
+
+}
+
+
+
+         ?>
   </body>
 </html>
