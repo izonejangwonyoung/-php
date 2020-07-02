@@ -2,17 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>WEB</title>
+    <title>I-ZONE INFORMATION REGISTER </title>
   </head>
   <body>
-<h1>WEB</h1>
+<h1>아이즈원 멤버 별 정보 등록 페이지-HOME</h1>
 
-<ol>
-  <li>HTML</li>
-</ol>
-<a href="create.php"></a>
+
+
+
+          <a href="create.php">멤버 별 정보 페이지로 이동하기</a>
 <h2>welcome</h2>
-아이즈원은 사랑입니다
+아이즈원 멤버 별 정보 등록 페이지-HOME 입니다.
 
   </body>
 </html>
