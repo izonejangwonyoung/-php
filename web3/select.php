@@ -5,11 +5,11 @@ $conn=mysqli_connect(
 'wh001500',
 'izone');
 
-$sql = " select * from izone_information limit 100";
+$sql = " select * from izone_information  where member_count=6";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($result);
-echo "$row[0]";
-
+echo '<h1>'.$row['name'].'</h1>';
+echo $row['profile'];
 
 
 
