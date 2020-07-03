@@ -7,3 +7,12 @@ print('e')
 print('l')
 print('l')
 print('sdds\no')
+print(
+    '''as
+    d
+    fa
+    sd
+    f
+    a
+    s'''
+    )
