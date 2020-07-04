@@ -2,9 +2,8 @@
 print("Content-Type: text/html")
 print()
 import cgi
-form = cgi.fieldstorage()
+form = cgi.FieldStorage()
 pageId = form.getvalue("id")
-print(pageId)
 print('''<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
