@@ -3,7 +3,14 @@ print("Content-Type: text/html")
 print()
 import cgi
 form = cgi.FieldStorage()
-pageId = form['id'].value
+if 'id' in form:
+    pageId = form['id'].value
+    description=open(pageId,'r').read()
+else:
+    pageId="welcome"
+    description='hello wiz*one'
+
+
 print('''<!DOCTYPE html>
 <html>
   <head>
@@ -18,11 +25,11 @@ print('''<!DOCTYPE html>
       <li><a href="index.py?id=count_3">count_3</a></li>
          </ol>
 <h2>{title}</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>{desc}</p>
   </body>
 </html>
 
 
 
 
-'''.format(title=pageId))
+'''.format(title=pageId, desc=description))
