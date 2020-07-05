@@ -1,11 +1,19 @@
 #!C:\Users\ericshim\AppData\Local\Programs\Python\Python38\python.exe
 print("Content-Type: text/html")
 print()
-import cgi
+import cgi, os
+
+files = os.listdir('data')
+# print(files)
+listStr=''
+for item in files:
+    listStr = listStr +  '<li><a href="index.py?id={name}">{name}</a></li>'.format(name=item)
+print(listStr)
+
 form = cgi.FieldStorage()
 if 'id' in form:
     pageId = form['id'].value
-    description=open(pageId,'r').read()
+    description=open('data/'+pageId,'r').read()
 else:
     pageId="welcome"
     description='hello wiz*one'
@@ -20,10 +28,8 @@ print('''<!DOCTYPE html>
   <body>
     <h1><a href="index.html">IZONE</a></h1>
     <ol>
-      <li><a href="index.py?id=count_1">count_1</a></li>
-      <li><a href="index.py?id=count_2">count_2</a></li>
-      <li><a href="index.py?id=count_3">count_3</a></li>
-         </ol>
+
+              </ol>
 <h2>{title}</h2>
 <p>{desc}</p>
   </body>
@@ -32,4 +38,4 @@ print('''<!DOCTYPE html>
 
 
 
-'''.format(title=pageId, desc=description))
+'''.format(title=pageId, desc=description,listStr=listStr))
