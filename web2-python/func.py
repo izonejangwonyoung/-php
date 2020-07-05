@@ -8,10 +8,24 @@
 
 
 #code..
+# def average(a,b,c):
+#
+#     s=a+b+c
+#     r=s/3
+#     print(r)
+#
+# average(10,20,30)
+
 def average(a,b,c):
 
     s=a+b+c
     r=s/3
-    print(r)
+    return r
 
-average(10,20,30)
+print(average(10,20,30))
+
+
+def a():
+    return 'haha'
+
+print(a())
