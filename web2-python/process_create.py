@@ -10,7 +10,7 @@ description = form['description'].value
 opened_file=open('data/'+title,'w')
 
 opened_file.write(description)
-
+opened_file.close()
 
 #redirection
 print("location: index.py?id="+title)
