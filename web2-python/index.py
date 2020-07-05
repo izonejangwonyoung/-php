@@ -1,8 +1,7 @@
 #!C:\Users\ericshim\AppData\Local\Programs\Python\Python38\python.exe
 print("Content-Type: text/html")
 print()
-import cgi
-import os
+import cgi,os
 
 files = os.listdir('data')
 # print(files)
