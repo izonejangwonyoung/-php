@@ -22,6 +22,9 @@ else:
 
 if id_user == '2000shim' and pwd_user == "1111":
     print("hello admin")
+elif id_user == '2000shim' and pwd_user == "1234":
+    print("hello admin")
+
 else:
     print("who are you?")
 
