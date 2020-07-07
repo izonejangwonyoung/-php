@@ -1,15 +1,9 @@
 #!C:\Users\ericshim\AppData\Local\Programs\Python\Python38\python.exe
 print("Content-Type: text/html")
 print()
-import cgi, os
+import cgi, os,view
 
-def getlist():
-        files = os.listdir('data')
-        # print(files)
-        listStr=''
-        for item in files:
-            listStr = listStr +'<li><a href="index.py?id={name}">{name}</a></li>'.format(name=item)
-        return listStr
+
 
 form = cgi.FieldStorage()
 if 'id' in form:
@@ -50,4 +44,4 @@ print('''<!DOCTYPE html>
 
 
 
-'''.format(title=pageId, desc=description,listStr=getlist(),form_default_title=pageId,form_default_description=description))
+'''.format(title=pageId, desc=description,listStr=view.getlist(),form_default_title=pageId,form_default_description=description))

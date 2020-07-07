@@ -1,3 +1,4 @@
+import os
 def getlist():
     files = os.listdir('data')
     # print(files)
@@ -5,6 +6,3 @@ def getlist():
     for item in files:
         listStr = listStr + '<li><a href="index.py?id={name}">{name}</a></li>'.format(name=item)
     return listStr
-
-
-
