@@ -28,13 +28,15 @@ else:
 print('''<!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="EUC-KR">
     <title>izone</title>
+
   </head>
   <body>
 <h1>    IZONE 멤버 별 정보 등록 PAGE  </h1>
-<h4>아이즈원 갤러리로 이동하려면 <a href="http://127.0.0.1/WEB1/1.HTML">여기</a>를 눌러주세요.</h4>
     <ol>
+
 <strong>{listStr}</strong>
     </ol>
 <br><br><br>
@@ -42,7 +44,7 @@ print('''<!DOCTYPE html>
 <a href="index.py">home</a>
 {update_link}
 {delete_action}
-
+<h4>아이즈원 갤러리로 이동하려면 <a href="http://127.0.0.1/WEB1/1.HTML">여기</a>를 눌러주세요.</h4>
 <br><br>
 <h2>{title}</h2>
 <p>{desc}</p>
