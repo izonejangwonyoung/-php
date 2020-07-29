@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+        
+            #parent,#other{
+                border: 5px solid tomato;    
+            }
+            #parent{
+                position: relative;
+/*
+                position: absolute;
+                position: static;
+*/
+            }
+            #me{
+                background-color: black;
+                color: white;
+                position: absolute;
+                left:0px;
+                top:0px;
+                
+            }
+            }
+        </style>
+    </head>
+    <body>
+    <div id="other">other </div>
+    <div id="parent">
+    parent
+        <div id="me">me</div>
+        </div>
+    </body>
+</html>
